@@ -47,6 +47,7 @@ import { ModalLayoutComponent } from '@mm-components/modal-layout/modal-layout.c
 import { PanelHeaderComponent } from '@mm-components/panel-header/panel-header.component';
 import { SidebarMenuComponent } from '@mm-components/sidebar-menu/sidebar-menu.component';
 import { ToolBarComponent } from '@mm-components/tool-bar/tool-bar.component';
+import { TrainingCardsFormComponent } from '@mm-components/training-cards-form/training-cards-form.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { ToolBarComponent } from '@mm-components/tool-bar/tool-bar.component';
     ModalLayoutComponent,
     PanelHeaderComponent,
     SidebarMenuComponent,
+    TrainingCardsFormComponent,
     ToolBarComponent,
   ],
   imports: [
@@ -121,6 +123,7 @@ import { ToolBarComponent } from '@mm-components/tool-bar/tool-bar.component';
     ModalLayoutComponent,
     PanelHeaderComponent,
     SidebarMenuComponent,
+    TrainingCardsFormComponent,
     ToolBarComponent,
   ]
 })

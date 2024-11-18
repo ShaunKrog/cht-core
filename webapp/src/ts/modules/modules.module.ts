@@ -41,12 +41,15 @@ import { AnalyticsTargetAggregatesSidebarFilterComponent }
 import {
   AnalyticsTargetAggregatesDetailComponent
 } from '@mm-modules/analytics/analytics-target-aggregates-detail.component';
+import { TrainingsComponent } from '@mm-modules/trainings/trainings.component';
+import { TrainingsContentComponent } from '@mm-modules/trainings/trainings-content.component';
 import { TasksComponent } from '@mm-modules/tasks/tasks.component';
 import { TasksSidebarFilterComponent } from '@mm-modules/tasks/tasks-sidebar-filter.component';
 import { TasksContentComponent } from '@mm-modules/tasks/tasks-content.component';
 import { TasksGroupComponent } from '@mm-modules/tasks/tasks-group.component';
 import { TestingComponent } from '@mm-modules/testing/testing.component';
 import { DirectivesModule } from '@mm-directives/directives.module';
+import { ModalsModule } from '@mm-modals/modals.module';
 
 @NgModule({
   declarations: [
@@ -75,6 +78,8 @@ import { DirectivesModule } from '@mm-directives/directives.module';
     AnalyticsTargetAggregatesComponent,
     AnalyticsTargetAggregatesDetailComponent,
     AnalyticsTargetAggregatesSidebarFilterComponent,
+    TrainingsComponent,
+    TrainingsContentComponent,
     TasksComponent,
     TasksSidebarFilterComponent,
     TasksContentComponent,
@@ -96,6 +101,7 @@ import { DirectivesModule } from '@mm-directives/directives.module';
     MatDialogModule,
     MatExpansionModule,
     MatMenuModule,
+    ModalsModule,
   ],
   exports: [
     HomeComponent,
@@ -106,6 +112,8 @@ import { DirectivesModule } from '@mm-directives/directives.module';
     ReportsComponent,
     MessagesComponent,
     ContactsComponent,
+    TrainingsComponent,
+    TrainingsContentComponent,
     PrivacyPolicyComponent,
     TasksComponent,
   ]
