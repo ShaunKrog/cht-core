@@ -14,6 +14,7 @@ import { LineageModelGeneratorService } from '@mm-services/lineage-model-generat
 import { PerformanceService } from '@mm-services/performance.service';
 import { ExtractLineageService } from '@mm-services/extract-lineage.service';
 import { TasksSidebarFilterComponent } from '@mm-modules/tasks/tasks-sidebar-filter.component';
+import { UserContactService } from '@mm-services/user-contact.service';
 
 @Component({
   templateUrl: './tasks.component.html',
@@ -22,13 +23,14 @@ export class TasksComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(TasksSidebarFilterComponent) tasksSidebarFilter: TasksSidebarFilterComponent;
 
   constructor(
-    private store: Store,
-    private changesService: ChangesService,
-    private contactTypesService: ContactTypesService,
-    private rulesEngineService: RulesEngineService,
-    private performanceService: PerformanceService,
-    private lineageModelGeneratorService: LineageModelGeneratorService,
-    private extractLineageService: ExtractLineageService,
+    private readonly store: Store,
+    private readonly changesService: ChangesService,
+    private readonly contactTypesService: ContactTypesService,
+    private readonly rulesEngineService: RulesEngineService,
+    private readonly performanceService: PerformanceService,
+    private readonly lineageModelGeneratorService: LineageModelGeneratorService,
+    private readonly extractLineageService: ExtractLineageService,
+    private readonly userContactService: UserContactService
   ) {
     this.tasksActions = new TasksActions(store);
     this.globalActions = new GlobalActions(store);
@@ -115,7 +117,7 @@ export class TasksComponent implements OnInit, AfterViewInit, OnDestroy {
     this.hasTasks = false;
     this.loading = true;
     this.debouncedReload = _debounce(this.refreshTasks.bind(this), 1000, { maxWait: 10 * 1000 });
-    this.userLineageLevel = this.extractLineageService.getUserLineageToRemove();
+    this.userLineageLevel = this.userContactService.getUserLineageToRemove();
     this.refreshTasks();
   }
 
